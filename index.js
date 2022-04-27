@@ -32,9 +32,11 @@ async function run() {
       res.send(users);
     });
     app.get('/',async (req, res) => {
-   
-      res.send("connect aaa");
-    });
+    res.send("connect aaa");
+    });  
+    app.get('/hero',async (req, res) => {
+    res.send("connect your hero");
+    });  
 
     app.post('/user',async(req,res) =>{
         const user = req.body;
