@@ -33,7 +33,7 @@ async function run() {
     });
     app.get('/',async (req, res) => {
    
-      res.send("connect");
+      res.send("connect aaa");
     });
 
     app.post('/user',async(req,res) =>{
