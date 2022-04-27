@@ -24,12 +24,16 @@ async function run() {
     await client.connect();
     const userCollection = client.db('userDb').collection('useCollections'); 
   try {
-    
+
     app.get('/user',async (req, res) => {
       const query = {};
       const cursor = userCollection.find(query);
       const users = await cursor.toArray();
       res.send(users);
+    });
+    app.get('/',async (req, res) => {
+   
+      res.send("connect");
     });
 
     app.post('/user',async(req,res) =>{
